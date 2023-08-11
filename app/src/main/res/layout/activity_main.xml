@@ -80,7 +80,7 @@
     <EditText
         android:id="@+id/inputSides"
         android:layout_width="201dp"
-        android:layout_height="47dp"
+        android:layout_height="48dp"
         android:layout_marginTop="12dp"
         android:hint="Enter number of sides"
         android:inputType="textPersonName"
@@ -95,7 +95,7 @@
     <Button
         android:id="@+id/button3"
         android:layout_width="104dp"
-        android:layout_height="46dp"
+        android:layout_height="48dp"
         android:text="Add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -107,7 +107,7 @@
     <Spinner
         android:id="@+id/diceSpinner"
         android:layout_width="338dp"
-        android:layout_height="36dp"
+        android:layout_height="48dp"
         android:layout_marginTop="72dp"
         android:backgroundTint="@color/black"
 
