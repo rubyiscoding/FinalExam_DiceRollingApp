@@ -84,27 +84,27 @@ class MainActivity : AppCompatActivity() {
             when (checkedId) {
                 R.id.radio4sided -> {
                     // Handle the selection of 4-sided die
-                    Toast.makeText(this, "You have selected 4-sided die", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "You have selected 4-sided die!", Toast.LENGTH_SHORT).show()
                 }
                 R.id.radio6sided -> {
                     // Handle the selection of 6-sided die
-                    Toast.makeText(this, "You have selected 6-sided die", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "You have selected 6-sided die!", Toast.LENGTH_SHORT).show()
                 }
                 R.id.radio8sided -> {
                     // Handle the selection of 8-sided die
-                    Toast.makeText(this, "You have selected 8-sided die", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "You have selected 8-sided die!", Toast.LENGTH_SHORT).show()
                 }
                 R.id.radio10sided -> {
                     // Handle the selection of 10-sided die
-                    Toast.makeText(this, "You have selected 10-sided die", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "You have selected 10-sided die!", Toast.LENGTH_SHORT).show()
                 }
                 R.id.radio12sided -> {
                     // Handle the selection of 12-sided die
-                    Toast.makeText(this, "You have selected 12-sided die", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "You have selected 12-sided die!", Toast.LENGTH_SHORT).show()
                 }
                 R.id.radio20sided -> {
                     // Handle the selection of 20-sided die
-                    Toast.makeText(this, "You have selected 20-sided die", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "You have selected 20-sided die!", Toast.LENGTH_SHORT).show()
                 }
             }
         }

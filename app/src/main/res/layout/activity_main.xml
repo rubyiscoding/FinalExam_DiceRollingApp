@@ -15,6 +15,7 @@
         android:id="@+id/viewRoll1"
         android:layout_width="wrap_content"
         android:layout_height="74dp"
+        android:fontFamily="@font/chewy"
         android:text="0"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -30,9 +31,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:checked="true"
+        android:fontFamily="@font/chicle"
         android:minHeight="48dp"
         android:text="Light"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.951"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,6 +44,7 @@
         android:id="@+id/viewRoll2"
         android:layout_width="wrap_content"
         android:layout_height="74dp"
+        android:fontFamily="@font/chewy"
         android:text="0"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -56,7 +59,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="360dp"
+        android:fontFamily="@font/chewy"
         android:text="Roll1"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.049"
@@ -69,7 +74,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="360dp"
+        android:fontFamily="@font/chewy"
         android:text="Roll2"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.88"
@@ -82,6 +89,8 @@
         android:layout_width="201dp"
         android:layout_height="48dp"
         android:layout_marginTop="12dp"
+        android:backgroundTint="#857C7C"
+        android:fontFamily="@font/bubblegum_sans"
         android:hint="Enter number of sides"
         android:inputType="textPersonName"
         android:padding="10dp"
@@ -96,6 +105,7 @@
         android:id="@+id/button3"
         android:layout_width="104dp"
         android:layout_height="48dp"
+        android:fontFamily="@font/bubblegum_sans"
         android:text="Add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -106,11 +116,12 @@
 
     <Spinner
         android:id="@+id/diceSpinner"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
         android:layout_width="338dp"
         android:layout_height="48dp"
         android:layout_marginTop="72dp"
-        android:backgroundTint="@color/black"
 
+        android:backgroundTint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.21"
         app:layout_constraintStart_toStartOf="parent"
@@ -120,18 +131,22 @@
         android:id="@+id/customSelection"
         android:layout_width="270dp"
         android:layout_height="45dp"
-        android:text="Select a die below."
+        android:background="#B7C1C5"
+        android:fontFamily="@font/chicle"
+        android:text="Select a die below:"
         android:textAlignment="center"
-        android:textStyle="bold"
+        android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@+id/diceSpinner"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp">
+
     </TextView>
 
     <RadioGroup
         android:id="@+id/diceRadioGroup"
         android:layout_width="214dp"
         android:layout_height="291dp"
+        android:checkedButton="@id/radio4sided"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -146,6 +161,7 @@
             android:layout_row="0"
             android:layout_column="0"
             android:checked="false"
+            android:fontFamily="@font/bubblegum_sans"
             android:text="4-sided" />
 
         <RadioButton
@@ -156,6 +172,7 @@
             android:layout_column="1"
             android:layout_marginStart="4dp"
             android:checked="false"
+            android:fontFamily="@font/bubblegum_sans"
             android:text="6-sided" />
 
 
@@ -166,6 +183,7 @@
             android:layout_row="0"
             android:layout_column="2"
             android:checked="false"
+            android:fontFamily="@font/bubblegum_sans"
             android:text="8-sided" />
 
         <RadioButton
@@ -175,6 +193,7 @@
             android:layout_row="1"
             android:layout_column="0"
             android:checked="false"
+            android:fontFamily="@font/bubblegum_sans"
             android:text="10-sided" />
 
         <RadioButton
@@ -184,6 +203,7 @@
             android:layout_row="1"
             android:layout_column="1"
             android:checked="false"
+            android:fontFamily="@font/bubblegum_sans"
             android:text="12-sided" />
 
         <RadioButton
@@ -193,8 +213,8 @@
             android:layout_row="1"
             android:layout_column="2"
             android:checked="false"
+            android:fontFamily="@font/bubblegum_sans"
             android:text="20-sided" />
-
 
     </RadioGroup>
 
