@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#696969"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/viewRoll1"
+        android:layout_width="wrap_content"
+        android:layout_height="74dp"
+        android:text="0"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.133" />
+
+    <Switch
+        android:id="@+id/themeSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:checked="true"
+        android:minHeight="48dp"
+        android:text="Light"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/viewRoll2"
+        android:layout_width="wrap_content"
+        android:layout_height="74dp"
+        android:text="0"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.813"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.133" />
+
+    <Button
+        android:id="@+id/btnRoll1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="360dp"
+        android:text="Roll1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewRoll1"
+        app:layout_constraintVertical_bias="0.289" />
+
+    <Button
+        android:id="@+id/btnRoll2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="360dp"
+        android:text="Roll2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewRoll2"
+        app:layout_constraintVertical_bias="0.263" />
+
+    <EditText
+        android:id="@+id/inputSides"
+        android:layout_width="201dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="12dp"
+        android:hint="Enter number of sides"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRoll1"
+        tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="104dp"
+        android:layout_height="46dp"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.677"
+        app:layout_constraintStart_toEndOf="@+id/inputSides"
+        app:layout_constraintTop_toBottomOf="@+id/btnRoll2"
+        app:layout_constraintVertical_bias="0.037" />
+
+    <Spinner
+        android:id="@+id/diceSpinner"
+        android:layout_width="338dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="72dp"
+        android:backgroundTint="@color/black"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputSides" />
+
+    <TextView
+        android:id="@+id/customSelection"
+        android:layout_width="270dp"
+        android:layout_height="45dp"
+        android:text="Select a die below."
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/diceSpinner"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp">
+    </TextView>
+
+    <RadioGroup
+        android:id="@+id/diceRadioGroup"
+        android:layout_width="214dp"
+        android:layout_height="291dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customSelection">
+
+
+        <RadioButton
+            android:id="@+id/radio4sided"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:checked="false"
+            android:text="4-sided" />
+
+        <RadioButton
+            android:id="@+id/radio6sided"
+            android:layout_width="204dp"
+            android:layout_height="49dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_marginStart="4dp"
+            android:checked="false"
+            android:text="6-sided" />
+
+
+        <RadioButton
+            android:id="@+id/radio8sided"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:checked="false"
+            android:text="8-sided" />
+
+        <RadioButton
+            android:id="@+id/radio10sided"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:checked="false"
+            android:text="10-sided" />
+
+        <RadioButton
+            android:id="@+id/radio12sided"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:checked="false"
+            android:text="12-sided" />
+
+        <RadioButton
+            android:id="@+id/radio20sided"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:checked="false"
+            android:text="20-sided" />
+
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
