@@ -218,4 +218,31 @@
 
     </RadioGroup>
 
+    <Button
+        android:id="@+id/btnRoll"
+        android:layout_width="106dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="48dp"
+        android:padding="8dp"
+        android:text="Roll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customSelection" />
+
+    <Button
+        android:id="@+id/btnRollTwice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:padding="8dp"
+        android:text="Roll Twice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRoll" />
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
