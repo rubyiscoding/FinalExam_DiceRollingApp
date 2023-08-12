@@ -54,7 +54,12 @@ class MainActivity : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>?) {
             }
 
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
                 getSpinnerValue = dice[position]
             }
         }
@@ -84,27 +89,38 @@ class MainActivity : AppCompatActivity() {
             when (checkedId) {
                 R.id.radio4sided -> {
                     // Handle the selection of 4-sided die
-                    Toast.makeText(this, "You have selected 4-sided die!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "You have selected 4-sided die!", Toast.LENGTH_SHORT)
+                        .show()
                 }
+
                 R.id.radio6sided -> {
                     // Handle the selection of 6-sided die
-                    Toast.makeText(this, "You have selected 6-sided die!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "You have selected 6-sided die!", Toast.LENGTH_SHORT)
+                        .show()
                 }
+
                 R.id.radio8sided -> {
                     // Handle the selection of 8-sided die
-                    Toast.makeText(this, "You have selected 8-sided die!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "You have selected 8-sided die!", Toast.LENGTH_SHORT)
+                        .show()
                 }
+
                 R.id.radio10sided -> {
                     // Handle the selection of 10-sided die
-                    Toast.makeText(this, "You have selected 10-sided die!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "You have selected 10-sided die!", Toast.LENGTH_SHORT)
+                        .show()
                 }
+
                 R.id.radio12sided -> {
                     // Handle the selection of 12-sided die
-                    Toast.makeText(this, "You have selected 12-sided die!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "You have selected 12-sided die!", Toast.LENGTH_SHORT)
+                        .show()
                 }
+
                 R.id.radio20sided -> {
                     // Handle the selection of 20-sided die
-                    Toast.makeText(this, "You have selected 20-sided die!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "You have selected 20-sided die!", Toast.LENGTH_SHORT)
+                        .show()
                 }
             }
         }
@@ -126,6 +142,55 @@ class MainActivity : AppCompatActivity() {
             editor.apply()
 
             Toast.makeText(this, "Your value is saved!: $customValue", Toast.LENGTH_SHORT).show()
+
+            // Button to roll the selected die
+            val rollButton = findViewById<Button>(R.id.btnRoll)
+            rollButton.setOnClickListener {
+                val selectedDieSides = getSpinnerValue.toInt()
+                val randomValue = Random.nextInt(selectedDieSides) + 1
+                viewRoll1.text = randomValue.toString()
+            }
+
+            // Button to roll the selected die twice
+            val rollTwiceButton = findViewById<Button>(R.id.btnRollTwice)
+            rollTwiceButton.setOnClickListener {
+                val selectedDieSides = getSpinnerValue.toInt()
+                val randomValue1 = Random.nextInt(selectedDieSides) + 1
+                val randomValue2 = Random.nextInt(selectedDieSides) + 1
+                viewRoll1.text = randomValue1.toString()
+                viewRoll2.text = randomValue2.toString()
+            }
         }
+
+        val btnRoll: Button = findViewById(R.id.btnRoll)
+        btnRoll.setOnClickListener {
+            val selectedDieSides = getSelectedDieSides() // Implement this function to get the selected die's sides
+            val randomValue = (Math.random() * selectedDieSides + 1).toInt()
+
+            Toast.makeText(this, "Rolled: $randomValue", Toast.LENGTH_SHORT).show()
+        }
+
+        val btnRollTwice: Button = findViewById(R.id.btnRollTwice)
+        btnRollTwice.setOnClickListener {
+            val selectedDieSides = getSelectedDieSides() // Implement this function to get the selected die's sides
+            val randomValue1 = (Math.random() * selectedDieSides + 1).toInt()
+            val randomValue2 = (Math.random() * selectedDieSides + 1).toInt()
+
+            Toast.makeText(this, "Rolled: $randomValue1 and $randomValue2", Toast.LENGTH_SHORT).show()
+        }
+
+
+
     }
+    private fun getSelectedDieSides(): Int {
+        val radioGroup: RadioGroup = findViewById(R.id.diceRadioGroup)
+        val checkedRadioButtonId = radioGroup.checkedRadioButtonId
+
+        val selectedRadioButton: RadioButton = findViewById(checkedRadioButtonId)
+        val selectedDieSidesText = selectedRadioButton.text.toString()
+
+        return selectedDieSidesText.substringBefore("-").toInt()
+    }
+
+
 }
